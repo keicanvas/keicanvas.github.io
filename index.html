@@ -6,16 +6,17 @@
 <title>Kei Canvas Spot Finder</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#111;
-color:#fff;
+background:#ffffff;
+color:#222;
 min-height:100vh;
 display:flex;
 justify-content:center;
@@ -25,50 +26,60 @@ padding:20px;
 
 .container{
 width:100%;
-max-width:450px;
+max-width:380px;
 text-align:center;
 }
 
 .logo{
-width:140px;
-height:140px;
-object-fit:cover;
-border-radius:50%;
-margin:0 auto 20px;
+max-width:220px;
+max-height:220px;
+width:auto;
+height:auto;
 display:block;
+margin:0 auto 15px;
+object-fit:contain;
 }
 
 h1{
-font-size:2.2rem;
-margin-bottom:10px;
+font-size:2rem;
+font-weight:700;
+margin-bottom:8px;
 }
 
 .subtitle{
-color:#aaa;
-margin-bottom:25px;
+font-size:16px;
+color:#777;
+margin-bottom:22px;
 }
 
 input{
 width:100%;
-padding:16px;
-font-size:18px;
-border:none;
-border-radius:12px;
-outline:none;
+padding:14px;
+font-size:16px;
 text-align:center;
-margin-bottom:15px;
+border:2px solid #e8e8e8;
+border-radius:20px;
+outline:none;
+background:#fafafa;
+margin-bottom:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+input:focus{
+border-color:#d0d0d0;
 }
 
 button{
 width:100%;
-padding:16px;
-font-size:18px;
-font-weight:bold;
+padding:14px;
+font-size:16px;
+font-weight:700;
 border:none;
-border-radius:12px;
+border-radius:20px;
+background:#000;
+color:#fff;
 cursor:pointer;
-background:#fff;
-color:#111;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 transition:.2s;
 }
 
@@ -77,29 +88,33 @@ opacity:.9;
 }
 
 #result{
-margin-top:30px;
+margin-top:25px;
 }
 
 .spot-label{
 font-size:18px;
-color:#aaa;
-margin-bottom:10px;
+color:#666;
+margin-bottom:8px;
 }
 
 .spot-number{
 font-size:72px;
-font-weight:bold;
+font-weight:800;
+color:#000;
+line-height:1;
 }
 
 .not-found{
 font-size:20px;
-color:#ff6b6b;
+color:#d9534f;
+font-weight:600;
 }
 
 .loading{
 font-size:18px;
-color:#aaa;
+color:#777;
 }
+
 </style>
 </head>
 
@@ -112,7 +127,7 @@ color:#aaa;
 <h1>Find Your Spot</h1>
 
 <div class="subtitle">
-Enter your Username or Name
+Enter your username or name
 </div>
 
 <input
