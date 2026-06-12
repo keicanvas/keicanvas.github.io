@@ -19,12 +19,11 @@ box-sizing:border-box;
 body{
 font-family:'Baloo 2',sans-serif;
 background:#ffffff;
-color:#8B9778;
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:40px 20px;
+padding:30px 20px;
 }
 
 .container{
@@ -34,32 +33,32 @@ text-align:center;
 }
 
 .logo{
-width:130px;
+width:80px;
 height:auto;
 display:block;
-margin:0 auto 60px;
+margin:0 auto 30px;
 object-fit:contain;
 }
 
 h1{
-font-size:3rem;
-line-height:1;
+font-size:1.8rem;
+line-height:1.1;
 font-weight:700;
 color:#8B9778;
-margin-bottom:18px;
+margin-bottom:8px;
 }
 
 .subtitle{
-font-size:1.2rem;
+font-size:.95rem;
 color:#9ca18f;
-margin-bottom:30px;
+margin-bottom:22px;
 }
 
 input{
 width:100%;
-height:62px;
-padding:0 24px;
-font-size:1.2rem;
+height:50px;
+padding:0 20px;
+font-size:.95rem;
 border:2px solid #d8ddd0;
 border-radius:999px;
 background:#fff;
@@ -74,60 +73,55 @@ color:#b1b6a7;
 }
 
 button{
-margin-top:22px;
-width:170px;
-height:52px;
+margin-top:16px;
+width:130px;
+height:42px;
 border:none;
 border-radius:999px;
 background:#8B9778;
 color:white;
 font-family:'Baloo 2',sans-serif;
-font-size:1.2rem;
+font-size:.95rem;
 font-weight:600;
 cursor:pointer;
 box-shadow:0 6px 16px rgba(139,151,120,.25);
-transition:.2s;
 }
 
 button:hover{
-transform:translateY(-2px);
+opacity:.9;
 }
 
 #result{
-margin-top:40px;
+margin-top:28px;
 }
 
 .spot-label{
-font-size:1.3rem;
+font-size:.95rem;
 color:#8B9778;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .spot-number{
-font-size:5rem;
+font-size:3.5rem;
 font-weight:700;
 line-height:1;
 color:#8B9778;
 }
 
 .not-found{
-font-size:1.3rem;
-color:#c86b6b;
+font-size:1rem;
+color:#d46a6a;
 }
 
 .loading{
-font-size:1.2rem;
+font-size:1rem;
 color:#8B9778;
 }
 
 .footer{
-margin-top:30px;
-font-size:1rem;
+margin-top:28px;
+font-size:.85rem;
 color:#b3b3b3;
-}
-
-.heart{
-font-size:.9em;
 }
 
 </style>
@@ -137,14 +131,12 @@ font-size:.9em;
 
 <div class="container">
 
-<img src="logo.JPG" class="logo" alt="Kei Canvas">
+<img src="logo.jpg" class="logo" alt="Kei Canvas">
 
-<h1>
-Check Your<br>Waitlist ♡
-</h1>
+<h1>Waitlist Lookup ♡</h1>
 
 <div class="subtitle">
-Enter your username or name below
+Enter your username or name
 </div>
 
 <input
@@ -191,7 +183,7 @@ if(data.found){
 
 document.getElementById("result").innerHTML = `
 <div class="spot-label">
-Your Waitlist Number ✨
+Your Waitlist Number
 </div>
 
 <div class="spot-number">
@@ -203,7 +195,7 @@ Your Waitlist Number ✨
 
 document.getElementById("result").innerHTML = `
 <div class="not-found">
-Name Not Found ♡
+Name Not Found
 </div>
 `;
 
@@ -221,8 +213,7 @@ Connection Error
 
 }
 
-document
-.getElementById("name")
+document.getElementById("name")
 .addEventListener("keypress", function(e){
 
 if(e.key === "Enter"){
