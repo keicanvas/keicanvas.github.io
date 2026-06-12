@@ -38,6 +38,11 @@ height:auto;
 display:block;
 margin:0 auto 70px;
 object-fit:contain;
+
+user-select:none;
+-webkit-user-select:none;
+-webkit-user-drag:none;
+pointer-events:none;
 }
 
 h1{
@@ -135,7 +140,11 @@ color:#b3b3b3;
 
 <div class="container">
 
-<img src="logo.jpg" class="logo" alt="Kei Canvas">
+<img
+src="logo.jpg"
+class="logo"
+alt="Kei Canvas"
+draggable="false">
 
 <h1>Where's My Spot? ♡</h1>
 
@@ -161,6 +170,16 @@ Thank you for your patience ♡
 </div>
 
 <script>
+
+/* Disable right click */
+document.addEventListener('contextmenu', function(e){
+e.preventDefault();
+});
+
+/* Disable drag */
+document.addEventListener('dragstart', function(e){
+e.preventDefault();
+});
 
 async function findSpot(){
 
